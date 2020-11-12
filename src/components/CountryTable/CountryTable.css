@@ -1,0 +1,63 @@
+.countryTable__header {
+  display: flex;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.countryTable__header div {
+  flex: 1;
+}
+
+.countryTable__header button {
+  flex: 4;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  color: var(--text-color-secondary);
+  font-size: inherit;
+  font-family: inherit;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+}
+
+.countryItem {
+  display: flex;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  background-color: var(--background-color-light);
+  box-shadow: var(--box-shadow);
+  transition: transform 200ms ease-in-out,
+    box-shadow 200ms ease-in-out;
+
+  margin-bottom: 1rem;
+  border: 1px solid lightblue;
+}
+
+.countryItem:hover {
+  transform: translateY(-4px);
+  box-shadow: 8px 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.countryItem__name,
+.countryItem__population,
+.countryItem__capital,
+.countryItem__area {
+  flex: 4;
+}
+
+.countryItem__name {
+  text-align: left;
+  margin-left: 2rem;
+}
+
+.countryItem__flag {
+  flex: 1;
+}
+
+.countryItem__flag img {
+  width: 100%;
+  border-radius: 2px;
+}

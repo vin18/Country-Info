@@ -12,6 +12,7 @@
 .layout__header {
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .layout__theme {
@@ -19,6 +20,7 @@
   justify-content: space-between;
   align-items: center;
   color: var(--text-color-secondary);
+  cursor: pointer;
 }
 
 .layout__theme p {

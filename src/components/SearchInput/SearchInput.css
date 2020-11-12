@@ -8,17 +8,16 @@
   font-family: inherit;
   width: 100%;
   border: none;
-  padding: 0.8rem 1rem;
+  padding: 1rem;
   border-radius: 0.5rem;
   outline: none;
   color: var(--text-color-secondary);
   background-color: lightcyan;
+  text-indent: 3rem;
 }
 
 .searchInput input::placeholder {
   color: currentColor;
-  letter-spacing: 0.05rem;
-  padding-left: 3rem;
 }
 
 .searchInput__icon {

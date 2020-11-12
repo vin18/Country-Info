@@ -1,9 +1,11 @@
 import React from 'react';
 import Layout from '../components/Layout/Layout';
 import SearchInput from '../components/SearchInput/SearchInput';
+import CountryTable from '../components/CountryTable/CoutryTable';
+
 import './Home.css';
 
-const Home = () => {
+const Home = ({ countries }) => {
   return (
     <div className='home'>
       <Layout>
@@ -15,6 +17,7 @@ const Home = () => {
             <SearchInput />
           </div>
         </div>
+        <CountryTable countries={countries} />
       </Layout>
     </div>
   );
