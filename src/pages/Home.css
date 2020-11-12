@@ -1,0 +1,16 @@
+.home__inputContainer {
+  display: flex;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+.home__counts {
+  color: var(--text-color-secondary);
+  flex: 1;
+  margin-left: 2rem;
+}
+
+.home__input {
+  flex: 2;
+  margin-right: 2rem;
+}

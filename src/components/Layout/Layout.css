@@ -1,0 +1,34 @@
+.layout {
+  padding: 2rem;
+  width: 100vw;
+  height: 100vh;
+  max-width: 110rem;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.layout__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.layout__theme {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-color-secondary);
+}
+
+.layout__theme p {
+  margin-right: 0.5rem;
+}
+
+.layout__theme .MuiSvgIcon-root {
+  font-size: 2rem;
+}
+
+.layout__footer {
+  text-align: center;
+}

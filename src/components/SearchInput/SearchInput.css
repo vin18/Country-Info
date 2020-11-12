@@ -1,0 +1,29 @@
+.searchInput {
+  display: flex;
+  align-items: center;
+}
+
+.searchInput input {
+  font-size: inherit;
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  outline: none;
+  color: var(--text-color-secondary);
+  background-color: lightcyan;
+}
+
+.searchInput input::placeholder {
+  color: currentColor;
+  letter-spacing: 0.05rem;
+  padding-left: 3rem;
+}
+
+.searchInput__icon {
+  margin-right: -3rem;
+  z-index: 1;
+  color: var(--text-color-secondary);
+  transform: scale(1.5);
+}
