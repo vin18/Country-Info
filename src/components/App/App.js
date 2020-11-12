@@ -4,6 +4,7 @@ import './App.css';
 
 const App = () => {
   const [countries, setCountries] = useState([]);
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
     async function getCountries() {
@@ -14,9 +15,24 @@ const App = () => {
     getCountries();
   }, []);
 
+  const filteredCountries = countries.filter(
+    (country) =>
+      country.name.toLowerCase().includes(search) ||
+      country.region.toLowerCase().includes(search) ||
+      country.subregion.toLowerCase().includes(search)
+  );
+
+  const onInputChange = (event) => {
+    event.preventDefault();
+    setSearch(event.target.value.toLowerCase());
+  };
+
   return (
     <div>
-      <Home countries={countries !== null && countries} />
+      <Home
+        countries={filteredCountries}
+        onInputChange={onInputChange}
+      />
     </div>
   );
 };

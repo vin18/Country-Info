@@ -5,7 +5,7 @@ import CountryTable from '../components/CountryTable/CoutryTable';
 
 import './Home.css';
 
-const Home = ({ countries }) => {
+const Home = ({ countries, onInputChange }) => {
   return (
     <div className='home'>
       <Layout>
@@ -14,7 +14,7 @@ const Home = ({ countries }) => {
             <p>Found 250 countries</p>
           </div>
           <div className='home__input'>
-            <SearchInput />
+            <SearchInput onInputChange={onInputChange} />
           </div>
         </div>
         <CountryTable countries={countries} />
