@@ -1,7 +1,7 @@
 import React from 'react';
-import Layout from '../components/Layout/Layout';
-import SearchInput from '../components/SearchInput/SearchInput';
-import CountryTable from '../components/CountryTable/CoutryTable';
+import Layout from '../../components/Layout/Layout';
+import SearchInput from '../../components/SearchInput/SearchInput';
+import CountryTable from '../../components/CountryTable/CoutryTable';
 
 import './Home.css';
 
@@ -11,7 +11,7 @@ const Home = ({ countries, onInputChange }) => {
       <Layout>
         <div className='home__inputContainer'>
           <div className='home__counts'>
-            <p>Found 250 countries</p>
+            <p>Found {countries.length} countries</p>
           </div>
           <div className='home__input'>
             <SearchInput onInputChange={onInputChange} />

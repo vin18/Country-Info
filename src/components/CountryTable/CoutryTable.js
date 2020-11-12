@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './CountryTable.css';
 
 const CoutryTable = ({ countries }) => {
@@ -26,28 +27,28 @@ const CoutryTable = ({ countries }) => {
       </div>
 
       {countries.map((country) => (
-        <div key={country.name} className='countryItem'>
-          <div className='countryItem__flag'>
-            <img src={country.flag} alt={`${country.name} flag`} />
+        <Link to={`/country/${country.name}`} key={country.name}>
+          <div className='countryItem'>
+            <div className='countryItem__flag'>
+              <img src={country.flag} alt={`${country.name} flag`} />
+            </div>
+            <div className='countryItem__name'>
+              {country.name ? country.name : 'NA'}
+            </div>
+            <div className='countryItem__population'>
+              {country.population ? country.population : 'NA'}
+            </div>
+            <div className='countryItem__area'>
+              {country.area ? country.area : 'NA'}
+            </div>
+            <div className='countryItem__capital'>
+              {country.capital ? country.capital : 'NA'}
+            </div>
           </div>
-          <div className='countryItem__name'>
-            {country.name ? country.name : 'NA'}
-          </div>
-          <div className='countryItem__population'>
-            {country.population ? country.population : 'NA'}
-          </div>
-          <div className='countryItem__area'>
-            {country.area ? country.area : 'NA'}
-          </div>
-          <div className='countryItem__capital'>
-            {country.capital ? country.capital : 'NA'}
-          </div>
-        </div>
+        </Link>
       ))}
     </div>
   );
 };
-
-CoutryTable.defaultProps = {};
 
 export default CoutryTable;

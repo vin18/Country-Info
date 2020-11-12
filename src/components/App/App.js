@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import Home from '../../pages/Home';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
+import Home from '../../pages/Home/Home';
+import Country from '../../pages/Country/Country';
 import './App.css';
 
 const App = () => {
@@ -28,12 +34,20 @@ const App = () => {
   };
 
   return (
-    <div>
-      <Home
-        countries={filteredCountries}
-        onInputChange={onInputChange}
-      />
-    </div>
+    <Router>
+      <Switch>
+        <Route path='/' exact>
+          <Home
+            countries={filteredCountries}
+            onInputChange={onInputChange}
+          />
+        </Route>
+
+        <Route path='/country/:countryName' exact>
+          <Country />
+        </Route>
+      </Switch>
+    </Router>
   );
 };
 
