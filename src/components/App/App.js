@@ -44,7 +44,7 @@ const App = () => {
         </Route>
 
         <Route path='/country/:countryName' exact>
-          <Country />
+          <Country countries={countries} />
         </Route>
       </Switch>
     </Router>

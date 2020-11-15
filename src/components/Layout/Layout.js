@@ -1,4 +1,6 @@
 import React from 'react';
+import PublicIcon from '@material-ui/icons/Public';
+import { Link } from 'react-router-dom';
 import Brightness6Icon from '@material-ui/icons/Brightness6';
 import './Layout.css';
 
@@ -6,7 +8,10 @@ const Layout = ({ children }) => {
   return (
     <div className='layout'>
       <header className='layout__header'>
-        <h1>Country Info</h1>
+        <Link to='/'>
+          <h1>Country Info</h1>
+          <PublicIcon />
+        </Link>
         <div className='layout__theme'>
           <p>Light Mode</p> <Brightness6Icon />
         </div>

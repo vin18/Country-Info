@@ -1,0 +1,90 @@
+.country {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+
+.country__left {
+  border: 1.5px solid lightblue;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.country__flagContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.country__flagContainer img {
+  border-radius: 5px;
+  width: 100%;
+}
+
+.country__name {
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.country__region {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--text-color-secondary);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.countryItem__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.countryItem__info p {
+  color: var(--text-color-secondary);
+}
+
+.country__right {
+  border: 1.5px solid lightblue;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.country__right h3 {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.country__capital,
+.country__nativeName,
+.country__languages,
+.country__subregion,
+.country__currencies,
+.country__timeZones {
+  border-bottom: 0.5px solid lightblue;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.country__capital p:first-child,
+.country__nativeName p:first-child,
+.country__subregion p:first-child,
+.country__languagesLabel,
+.country__currenciesLabel,
+.country__timeZonesLabel {
+  color: var(--text-color-secondary);
+}
+
+.country__language {
+  display: flex;
+}
+
+.country__language p {
+  margin-right: 0.5rem;
+}
