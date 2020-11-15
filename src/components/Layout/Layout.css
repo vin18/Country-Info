@@ -35,8 +35,14 @@
   cursor: pointer;
 }
 
-.layout__theme p {
+.layout__theme button {
+  border: none;
+  color: var(--text-color-secondary);
+  font-size: inherit;
+  font-family: inherit;
   margin-right: 0.5rem;
+  background-color: transparent;
+  outline: 0;
 }
 
 .layout__theme .MuiSvgIcon-root {

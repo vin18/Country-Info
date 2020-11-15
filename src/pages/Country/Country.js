@@ -21,7 +21,6 @@ const Country = ({ countries }) => {
     subregion,
     currencies,
     timezones,
-    borders,
   } = countryItem;
 
   return (
@@ -70,7 +69,7 @@ const Country = ({ countries }) => {
             <p className='country__languagesLabel'>Languages</p>
             <div className='country__language'>
               {languages.map((language) => (
-                <p>
+                <p key={language.name}>
                   {language.name}
                   {language !== languages[languages.length - 1] &&
                     ','}
@@ -81,7 +80,7 @@ const Country = ({ countries }) => {
           <div className='country__currencies'>
             <p className='country__currenciesLabel'>Currencies</p>
             {currencies.map((currency) => (
-              <p>
+              <p key={currency.name}>
                 {currency.name}
                 {currency !== currencies[currencies.length - 1] &&
                   ','}
@@ -92,7 +91,7 @@ const Country = ({ countries }) => {
           <div className='country__timeZones'>
             <p className='country__timeZonesLabel'>Time Zones</p>
             {timezones.map((timezone) => (
-              <p>
+              <p key={timezone}>
                 {timezone}
                 {timezone !== timezones[timezones.length - 1] && ','}
               </p>

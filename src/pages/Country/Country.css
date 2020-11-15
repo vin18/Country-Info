@@ -6,8 +6,8 @@
 }
 
 .country__left {
-  border: 1.5px solid lightblue;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: var(--border-style);
+  box-shadow: var(--box-shadow);
 }
 
 .country__flagContainer {
@@ -50,8 +50,8 @@
 }
 
 .country__right {
-  border: 1.5px solid lightblue;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: var(--border-style);
+  box-shadow: var(--box-shadow);
 }
 
 .country__right h3 {

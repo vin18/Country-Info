@@ -12,7 +12,7 @@
   border-radius: 0.5rem;
   outline: none;
   color: var(--text-color-secondary);
-  background-color: lightcyan;
+  background-color: var(--background-color-dark);
   text-indent: 3rem;
 }
 
