@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PublicIcon from '@material-ui/icons/Public';
 import { Link } from 'react-router-dom';
 import Brightness6Icon from '@material-ui/icons/Brightness6';
@@ -6,9 +6,10 @@ import './Layout.css';
 
 const Layout = ({ children }) => {
   const [theme, setTheme] = useState('light');
+  const htmlRef = useRef(document.documentElement);
 
   useEffect(() => {
-    document.documentElement.setAttribute(
+    htmlRef.current.setAttribute(
       'data-theme',
       localStorage.getItem('theme')
     );
@@ -19,11 +20,11 @@ const Layout = ({ children }) => {
     if (theme === 'light') {
       setTheme('dark');
       localStorage.setItem('theme', 'dark');
-      document.documentElement.setAttribute('data-theme', 'dark');
+      htmlRef.current.setAttribute('data-theme', 'dark');
     } else {
       setTheme('light');
       localStorage.setItem('theme', 'light');
-      document.documentElement.setAttribute('data-theme', 'light');
+      htmlRef.current.setAttribute('data-theme', 'light');
     }
   };
 
