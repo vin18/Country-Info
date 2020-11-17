@@ -6,17 +6,21 @@ import {
 } from 'react-router-dom';
 import Home from '../../pages/Home/Home';
 import Country from '../../pages/Country/Country';
+import Loader from '../../components/Loader/Loader';
 import './App.css';
 
 const App = () => {
   const [countries, setCountries] = useState([]);
   const [search, setSearch] = useState('');
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function getCountries() {
+      setLoading(true);
       const res = await fetch(`https://restcountries.eu/rest/v2/all`);
       const countries = await res.json();
       setCountries(countries);
+      setLoading(false);
     }
     getCountries();
   }, []);
@@ -33,7 +37,9 @@ const App = () => {
     setSearch(event.target.value.toLowerCase());
   };
 
-  return (
+  return loading ? (
+    <Loader />
+  ) : (
     <Router>
       <Switch>
         <Route path='/' exact>
