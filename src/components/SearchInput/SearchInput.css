@@ -26,3 +26,14 @@
   color: var(--text-color-secondary);
   transform: scale(1.5);
 }
+
+@media only screen and (max-width: 480px) {
+  .searchInput input {
+    text-indent: 1rem;
+  }
+
+  .searchInput__icon {
+    transform: scale(1);
+    margin-right: -2rem;
+  }
+}

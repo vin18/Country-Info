@@ -1,14 +1,17 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useLayoutEffect, useRef } from 'react';
 import PublicIcon from '@material-ui/icons/Public';
 import { Link } from 'react-router-dom';
 import Brightness6Icon from '@material-ui/icons/Brightness6';
 import './Layout.css';
 
 const Layout = ({ children }) => {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState(() =>
+    localStorage.getItem('theme')
+  );
   const htmlRef = useRef(document.documentElement);
 
-  useEffect(() => {
+useLayoutEffect(() => {
+    localStorage.setItem('theme', 'light');
     htmlRef.current.setAttribute(
       'data-theme',
       localStorage.getItem('theme')
@@ -40,7 +43,7 @@ const Layout = ({ children }) => {
             className='layout__themeSwitcher'
             onClick={switchTheme}
           >
-            {theme[0].toUpperCase() + theme.slice(1)} Mode
+            {theme && theme[0].toUpperCase() + theme.slice(1)} Mode
           </button>
           <Brightness6Icon />
         </div>

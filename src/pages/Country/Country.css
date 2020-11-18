@@ -88,3 +88,44 @@
 .country__language p {
   margin-right: 0.5rem;
 }
+
+@media only screen and (max-width: 480px) {
+  .country {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .country__flagContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    padding: 0.2rem;
+  }
+
+  .country__region {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--text-color-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .countryItem__info {
+    margin: 0 3rem;
+  }
+
+  .country__population {
+    margin-bottom: 1rem;
+  }
+
+  .country__right p {
+    margin: -0.5rem;
+  }
+
+  .country__right > h3 {
+    font-size: 1.2rem;
+  }
+}

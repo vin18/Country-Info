@@ -5,7 +5,7 @@ import loader from './loader.svg';
 const Loader = () => {
   return (
     <div className='loader'>
-      <img src={loader} alt='Loading...' />
+      <img style={{ height: '8rem' }} src={loader} alt='Loading...' />
     </div>
   );
 };

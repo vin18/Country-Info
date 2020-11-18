@@ -14,6 +14,7 @@
   justify-content: space-between;
   cursor: pointer;
 }
+
 .layout__header a {
   flex: 1;
   text-align: center;
@@ -51,4 +52,23 @@
 
 .layout__footer {
   text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+  .layout__header a .MuiSvgIcon-root {
+    font-size: 2rem;
+  }
+
+  .layout__header h1 {
+    margin-left: 5rem;
+  }
+
+  .layout__theme button {
+    margin-right: 0.2rem;
+  }
+
+  .layout__theme .MuiSvgIcon-root {
+    font-size: 1.2rem;
+    margin-top: -0.2rem;
+  }
 }

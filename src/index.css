@@ -49,6 +49,12 @@ body {
   color: var(--text-color);
 }
 
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 0.8rem;
+  }
+}
+
 a {
   text-decoration: none;
   color: var(--text-color);
